@@ -1,6 +1,6 @@
 # REST Countries API Project
 
-This project is a web application that allows users to search for countries and view detailed information about them. The application uses the REST Countries API to fetch data.
+This project is a web application that allows users to search for countries and view detailed information about them. The application uses the REST Countries API to fetch data. in sometimes API has problem.
 
 ## Features
 
