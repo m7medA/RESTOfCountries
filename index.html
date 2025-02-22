@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link id="theme-link" rel="stylesheet" href="src/light-theme.css">
+    <script defer="" src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" defer="" src="src/JS/controller.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>REST Of Countries</title>
+</head>
+<body>
+    <div class="contianer">
+        <header class="row m-0 p-lg-4 border-bottom shadow-bottom d-flex justify-content-between align-items-center align-content-center">
+            <h3 class="col-lg-4 col-4 m-0">Where in the world?</h3>
+            <div class="col-lg-3 col-5 d-flex justify-content-end">
+                <button class="btn fs-5 rounded-pill d-flex justify-content-center" id="theme-toggle">
+                    <span><i class="fa-regular fa-moon pe-2"></i></span><span id="toggle_write">Dark Mode</span>
+                </button>
+            </div>
+        </header>
+        <div class="center position-relative">
+            <div class="content w-100 p-lg-4 pt-lg-5 pb-lg-0">
+                <div class="action-button row m-0 d-flex justify-content-between">
+                    <form class="col-lg-4 col-md-5 col-sm-12 search" id="search_form">
+                        <label for="search_input" class="px-3"><i class="fa-solid fa-magnifying-glass"></i></label>
+                        <input id="search_input" type="text" class="search__field" placeholder="Search for a country..."/>
+                    </form>
+                    <div class="col-lg-2 col-md-3 col-sm-12 d-flex justify-content-end p-0 pe-sm-3">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle
+                            " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Filter by Region
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#Africa">Africa</a></li>
+                                <li><a class="dropdown-item" href="#Americas">Americas</a></li>
+                                <li><a class="dropdown-item" href="#Asia">Asia</a></li>
+                                <li><a class="dropdown-item" href="#Europe">Europe</a></li>
+                                <li><a class="dropdown-item" href="#Oceania">Oceania</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result pt-lg-5 position-relative">
+                    <ul class="row m-0 list-unstyled d-flex justify-content-evenly m-auto result_contianer">
+                        <!-- <li class="col-lg-3 col-md-6 d-md-flex justify-content-md-center">
+                            <a class="card country text-decoration-none" href="">
+                                <img src="https://flagcdn.com/eg.svg" class="card-img-top country_img img-fluid img-thumbnail" alt="Country img">
+                                <div class="card-body country_data">
+                                    <h3 class="card-title country_name py-1">Egypt</h3>
+                                    <p class="card-text country_text"><span class="fw-bolder">Population:</span> 100M</p>
+                                    <p class="card-text country_text"><span class="fw-bolder">Region:</span> Africa</p>
+                                    <p class="card-text country_text"><span class="fw-bolder">Capital:</span> Cairo</p>
+                                </div>
+                            </a>
+                        </li> -->
+                        <!-- <div class="middle spinner d-flex justify-content-center align-items-center position-absolute">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div> -->
+                        <!-- <div class="error d-flex gap-3">
+                            <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+                            <p>No Country found for your query. Please try again!</p>
+                        </div> -->
+                        <div class="middle message d-flex justify-content-center align-items-center position-absolute">
+                            <h3>Where in the world?! 🌍</h3>
+                        </div>
+                    </ul>
+                </div>
+                <div class="pagination-row col-12 mt-3 d-flex justify-content-center pt-lg-4 position-relative">
+                    <div class="pagination w-100 d-flex justify-content-between position-relative">
+                        <!-- <button class="btn--inline pagination__btn--prev btn float-start gap-2 rounded-pill p-2">
+                            <span><i class="fa-solid fa-arrow-left"></i></span>
+                            <span>Page 1</span>
+                        </button>
+                        <button class="btn--inline pagination__btn--next btn float-end gap-2 rounded-pill p-2">
+                            <span>Page 3</span>
+                            <span><i class="fa-solid fa-arrow-right"></i></span>
+                        </button> -->
+                    </div>
+                    <p class="copyright text-center position-absolute my-3" class="">&copy; Copyright by
+                        <a class="linkedin-link text-decoration-none" target="_blank" href="https://www.linkedin.com/in/mohammed-ayman-910706268">
+                            Mo7med Ayman
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="content_details w-100 p-lg-4 pt-lg-4 pb-lg-0 position-absolute hidden">
+                <div class="action-button country_datails w-100 m-0 d-flex">
+                    <a class="btn_back btn fs-4 rounded-pill" href="">&larr; Back</a>
+                </div>
+                <div class="search-result w-100 pt-lg-4 position-relative">
+                    <div class="show_country_data w-100 row m-0 d-flex justify-content-between m-auto">
+                        <!-- <div class="country_img_detials col-lg-5 col-md-12 p-0 d-flex flex-column justify-content-center">
+                            <img src="https://flagcdn.com/eg.svg" class="country_img img-fluid img-thumbnail" alt="Country img">
+                        </div>
+                        <div class="detials col-lg-7 col-md-12 row m-0 p-lg-5">
+                            <h1 class="px-0 py-2 m-0">Egypt</h1>
+                            <div class="left_col col-sm-12 col-md-6 py-4 px-0">
+                                <p><span class="fw-bolder pe-2">Native Name:</span> مصر</p>
+                                <p><span class="fw-bolder pe-2">Population:</span> 100M</p>
+                                <p><span class="fw-bolder pe-2">Region:</span> Africa</p>
+                                <p><span class="fw-bolder pe-2">Sub Region:</span> Africa</p>
+                                <p><span class="fw-bolder pe-2">Capital:</span> Cairo</p>
+                            </div>
+                            <div class="right_col col-sm-12 col-md-6 py-4 px-0">
+                                <p><span class="fw-bolder pe-2">Top level Domain:</span> .eg</p>
+                                <p><span class="fw-bolder pe-2">Currencies:</span> Pound</p>
+                                <p><span class="fw-bolder pe-2">Languages:</span> Arabic</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="pagination-row col-12 mt-4 d-flex justify-content-center pt-lg-4 position-relative">
+                    <p class="copyright text-center position-absolute" class="">&copy; Directed By
+                        <a class="linkedin-link text-decoration-none my-3" target="_blank" href="https://www.linkedin.com/in/mohammed-ayman-910706268">
+                            Mo7med Ayman
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
