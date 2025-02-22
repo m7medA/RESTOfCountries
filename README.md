@@ -11,7 +11,7 @@ This project is a web application that allows users to search for countries and 
 
 ## Live Demo
 
-[Rest Of Countries 🌍](rest-of-countries-mo7med.netlify.app).
+[Rest Of Countries 🌍](https://rest-of-countries-mo7med.netlify.app).
 
 ## Technologies Used
 
