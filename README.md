@@ -17,10 +17,11 @@ This project is a web application that allows users to search for countries and 
 
 - HTML
 - CSS
-- JavaScript
+- JavaScript (Vanilla JS)
 - Bootstrap
 - REST Countries API
-- built using the MVC (Model-View-Controller) pattern.
+- Built using the MVC (Model-View-Controller) pattern
+- Publisher-Subscriber pattern
 
 ## Project Structure
 
